@@ -6,7 +6,7 @@ Flask==1.1.2
 gast==0.2.2
 google-pasta==0.2.0
 gunicorn==19.0.0
-opencv-python==3.4.2
+opencv_python==3.4.2
 h5py==2.8.0
 itsdangerous==1.1.0
 Jinja2==2.11.2
