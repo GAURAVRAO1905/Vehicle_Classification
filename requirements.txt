@@ -7,7 +7,7 @@ gast==0.2.2
 google-pasta==0.2.0
 h5py==2.8.0
 itsdangerous==1.1.0
-gunicorn
+gunicorn==19.0.0
 Jinja2==2.11.2
 joblib==0.17.0
 Keras-Preprocessing==1.1.0
