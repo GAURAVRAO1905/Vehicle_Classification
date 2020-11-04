@@ -9,11 +9,6 @@ from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D
 # Flask utils
 from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
-import cv2
-RUN apt-get update ##[edited]
-RUN apt-get install 'ffmpeg'\
-    'libsm6'\ 
-    'libxext6'  -y
 # Define a flask app
 app = Flask(__name__)
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
@@ -42,8 +37,6 @@ model.add(Dense(4, activation='softmax'))
 model.load_weights("model4_weights.h5")
 
 def load_preds(file_path):
-    img_array = cv2.imread(file_path, 0)
-    new_array = cv2.resize(img_array, (100, 100))
     new_array = np.float32(new_array)
     X = np.array(new_array).reshape(-1, 100, 100, 1)
     preds = model.predict(X)
