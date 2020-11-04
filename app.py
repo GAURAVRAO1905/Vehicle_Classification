@@ -5,6 +5,7 @@ import numpy as np
 from tensorflow.keras.layers import Dropout
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D
+import matplotlib.pyplot as plt
 # Keras
 # Flask utils
 from flask import Flask, request, render_template
@@ -37,6 +38,7 @@ model.add(Dense(4, activation='softmax'))
 model.load_weights("model4_weights.h5")
 
 def load_preds(file_path):
+    new_array = plt.imread(file_path)
     new_array = np.float32(new_array)
     X = np.array(new_array).reshape(-1, 100, 100, 1)
     preds = model.predict(X)
