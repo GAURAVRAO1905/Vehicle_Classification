@@ -9,7 +9,11 @@ from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D
 # Flask utils
 from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
-from cv2 import *
+import cv2
+RUN apt-get update ##[edited]
+RUN apt-get install 'ffmpeg'\
+    'libsm6'\ 
+    'libxext6'  -y
 # Define a flask app
 app = Flask(__name__)
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
