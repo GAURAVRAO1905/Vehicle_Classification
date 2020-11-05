@@ -35,7 +35,7 @@ model.add(Dense(256, activation='relu'))
 model.add(Dense(64, activation='relu'))
 model.add(Dense(4, activation='softmax'))
 
-model.load_weights("model4_weights.h5")
+model.load_weights("model4_weights.h5/model4_weights.h5")
 
 def load_preds(file_path):
     new_array = plt.imread(file_path)
